@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulir Mahasiswa</title>
+    <style>
+      /* Mengatur font dan ukuran tulisan pada body */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.9);
+        background-image: url(gambar/logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 35%;
+        background-attachment: fixed;
+      }
+
+      /* Mengatur tampilan card */
+      .card {
+        width: 50%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Mengatur margin pada label dan input */
+      label,
+      input,
+      select,
+      textarea {
+        margin: 10px 0;
+      }
+
+      /* Mengatur lebar input dan select pada form */
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      /* Mengatur lebar textarea pada form */
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      /* Mengatur style pada tombol */
+      .id1 {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .id {
+        background-color: #af4c4c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      /* Mengatur margin pada tombol */
+      .button-group {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* Mengatur tampilan h2 */
+      h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      /* Mengatur tampilan gambar */
+      .card img {
+        width: 100%;
+        opacity: 0.7;
+      }
+      /* Styling untuk layar dengan lebar maksimum 600px */
+      @media only screen and (max-width: 600px) {
+        body {
+          background-size: 70%;
+        }
+
+        .card {
+          width: 90%;
+        }
+      }
+
+      /* Styling untuk layar dengan lebar maksimum 400px */
+      @media only screen and (max-width: 400px) {
+        body {
+          background-size: 90%;
+        }
+
+        .card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <form>
+        <h2>DATA MAHASISWA UNIVERSITAS PROKLAMASI 45</h2>
+        <label for="nim">NIM:</label>
+        <input type="text" id="nim" name="nim" required />
+
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required />
+
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <div>
+          <input
+            type="radio"
+            id="laki_laki"
+            name="jenis_kelamin"
+            value="Laki-laki"
+            required
+          />
+          <label for="laki_laki">Laki-laki</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="perempuan"
+            name="jenis_kelamin"
+            value="Perempuan"
+            required
+          />
+          <label for="perempuan">Perempuan</label>
+        </div>
+
+        <label for="agama">Agama:</label>
+        <select id="agama" name="agama">
+          <option value="Islam">Islam</option>
+          <option value="Kristen">Kristen</option>
+          <option value="Katolik">Katolik</option>
+          <option value="Hindu">Hindu</option>
+          <option value="Buddha">Buddha</option>
+          <option value="Konghucu">Konghucu</option>
+        </select>
+
+        <label for="status">Status:</label>
+        <div>
+          <input type="radio" id="aktif" name="status" value="Aktif" required />
+          <label for="aktif">Aktif</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="nonaktif"
+            name="status"
+            value="Nonaktif"
+            required
+          />
+          <label for="nonaktif">Nonaktif</label>
+        </div>
+
+        <label for="program_studi">Program Studi:</label>
+        <select id="program_studi" name="program_studi">
+          <option value="Teknologi Informasi">Teknologi Informasi</option>
+          <option value="Manajemen">Manajemen</option>
+          <option value="Akuntansi">Akuntansi</option>
+          <option value="Hukum">Hukum</option>
+          <option value="Perminyakan">Perminyakan</option>
+          <option value="Ekonomi">Ekonomi</option>
+          <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+        </select>
+
+        <label for="komentar">Komentar:</label>
+        <textarea id="komentar" name="komentar" rows="5" required></textarea>
+
+        <div class="button-group">
+          <button class="id" type="reset">Ulangi</button>
+          <a class="id1" type="submit" href="halaman/hal1.html">Submit</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
